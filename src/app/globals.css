@@ -1,4 +1,8 @@
 @tailwind base;
-  @tailwind components;
-  @tailwind utilities;
-  
+@tailwind components;
+@tailwind utilities;
+
+.filter-menu-active {
+  filter: brightness(0) saturate(100%) invert(28%) sepia(21%) saturate(5145%)
+    hue-rotate(148deg) brightness(98%) contrast(97%);
+}

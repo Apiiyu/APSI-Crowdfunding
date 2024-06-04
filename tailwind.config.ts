@@ -19,8 +19,17 @@ const config = {
       },
     },
     extend: {
+      backgroundImage: {
+        "linear-gradient-progress-bar":
+          "linear-gradient(90deg, #07DECA 0%, #04786D 100%)",
+      },
+      boxShadow: {
+        "card-campaign": "0px 2px 7px 0px rgba(77, 77, 77, 0.13)",
+      },
       colors: {
         "black-primary": "#3E3E3E",
+        "black-secondary": "#181A20",
+        gray: "#E3E5E5",
         muted: "rgba(62, 62, 62, 0.6)",
         placeholder: "#CACACA",
         primary: "#04786D",
