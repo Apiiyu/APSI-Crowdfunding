@@ -17,16 +17,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
-        <main
-          id="content"
-          className={cn(
-            "relative inset-0 z-0 w-screen h-fit bg-background font-sans antialiased overflow-x-hidden",
-            nunitoSans.variable
-          )}
-        >
-          {children}
-        </main>
+      <body
+        className={cn(
+          "relative inset-0 z-0 w-screen h-fit bg-background font-sans antialiased overflow-x-hidden",
+          nunitoSans.variable
+        )}
+      >
+        <main id="content">{children}</main>
       </body>
     </html>
   );

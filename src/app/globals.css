@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
+
 .filter-menu-active {
   filter: brightness(0) saturate(100%) invert(28%) sepia(21%) saturate(5145%)
     hue-rotate(148deg) brightness(98%) contrast(97%);
