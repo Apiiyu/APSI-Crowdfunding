@@ -25,6 +25,7 @@ const config = {
       },
       boxShadow: {
         "card-campaign": "0px 2px 7px 0px rgba(77, 77, 77, 0.13)",
+        "card-profile": "0px 2px 150px 0px rgba(100, 100, 100, 0.13)",
       },
       colors: {
         "black-primary": "#3E3E3E",
@@ -33,7 +34,10 @@ const config = {
         muted: "rgba(62, 62, 62, 0.6)",
         placeholder: "#CACACA",
         primary: "#04786D",
+        secondary: "#209FA6",
         input: "#F5F5F5",
+        success: "rgba(32, 159, 166, 0.2)",
+        warning: "rgba(255, 189, 78, 0.20)",
       },
       fontFamily: {
         sans: ["var(--font-sans)", ...fontFamily.sans],

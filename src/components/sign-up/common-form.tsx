@@ -25,15 +25,15 @@ export default function SignUpCommonForm({
     >
       <FormField
         control={form.control}
-        name="username"
+        name="name"
         render={({ field }) => (
           <FormItem>
             <FormControl>
               <div className="relative w-full items-center">
                 <Input
-                  id="username"
+                  id="name"
                   type="text"
-                  placeholder="Username"
+                  placeholder="Name"
                   className="pl-14 min-h-16 rounded-xl bg-input text-base text-black-primary font-normal placeholder:text-placeholder"
                   {...field}
                 />

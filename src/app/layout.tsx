@@ -1,7 +1,12 @@
+// Components
+import { Toaster } from "@/components/ui/toaster";
+
 import type { Metadata } from "next";
 import { Nunito_Sans } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
+
+import Head from "next/head";
 
 const nunitoSans = Nunito_Sans({ subsets: ["latin"], variable: "--font-sans" });
 
@@ -17,13 +22,34 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <Head>
+        <link rel="shortcut icon" href="/images/favicon.ico" />
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/images/apple-touch-icon.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/images/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/images/favicon-16x16.png"
+        />
+      </Head>
       <body
         className={cn(
-          "relative inset-0 z-0 w-screen h-fit bg-background font-sans antialiased overflow-x-hidden",
+          "relative inset-0 z-0 w-screen h-fit min-h-screen bg-background font-sans antialiased overflow-x-hidden",
           nunitoSans.variable
         )}
       >
         <main id="content">{children}</main>
+        <Toaster />
       </body>
     </html>
   );

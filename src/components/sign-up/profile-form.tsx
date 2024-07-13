@@ -31,6 +31,7 @@ export default function SignUpProfileForm({
     event: React.ChangeEvent<HTMLInputElement>
   ) => {
     const file = event.target!.files![0];
+    form.setValue("avatar", file);
 
     if (!file) return;
 
@@ -46,7 +47,7 @@ export default function SignUpProfileForm({
   return (
     <section
       id="form-content"
-      className="relative inset-0 z-0 flex flex-col justify-center items-center w-full gap-8"
+      className="relative inset-0 z-0 flex flex-col justify-center items-center w-full gap-8 pb-96"
     >
       <section id="avatar" className="flex flex-col items-center gap-5">
         {profileImage ? (
@@ -85,12 +86,24 @@ export default function SignUpProfileForm({
           Tambah Foto Profil
         </span>
 
-        <input
-          type="file"
-          className="hidden"
-          ref={profilePictureRef}
-          onChangeCapture={onUploadProfilePicture}
-          accept="image/*"
+        <FormField
+          control={form.control}
+          name="avatar"
+          render={({ field }) => (
+            <FormItem>
+              <FormControl>
+                <input
+                  id="picture"
+                  type="file"
+                  className="hidden"
+                  onChangeCapture={onUploadProfilePicture}
+                  accept="image/*"
+                  ref={profilePictureRef}
+                />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
         />
       </section>
 
@@ -100,15 +113,15 @@ export default function SignUpProfileForm({
       >
         <FormField
           control={form.control}
-          name="displayName"
+          name="username"
           render={({ field }) => (
             <FormItem>
               <FormControl>
                 <div className="relative w-full items-center">
                   <Input
-                    id="displayName"
+                    id="username"
                     type="text"
-                    placeholder="Display name"
+                    placeholder="Username"
                     className="pl-14 min-h-16 rounded-xl bg-input text-base text-black-primary font-normal placeholder:text-placeholder"
                     {...field}
                   />
